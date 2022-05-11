@@ -16,7 +16,7 @@ services:
 
   hero:
     container_name: hero
-    image: tusharsharma3/hero:latest
+    image: hero:latest
     ports:
       - "8099:8099"
     restart: on-failure
@@ -31,7 +31,7 @@ services:
 
   angular-app:
     container_name: angular-app
-    image: tusharsharma3/angular-app:latest
+    image: angular-app:latest
     ports:
       - "4200:4200"
     command: npm start

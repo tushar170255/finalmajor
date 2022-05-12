@@ -45,5 +45,9 @@ export class HeroService {
   {
     return this.http.put(`${baseUrl}/hero/heroeditprofile`,hero);
   }
+  public deleteHero(userName: any)
+  {
+    return  this.http.put(`${baseUrl}/hero/deletehero`,userName);
+  }
  
 }

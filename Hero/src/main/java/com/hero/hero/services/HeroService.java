@@ -19,6 +19,7 @@ public interface HeroService {
     void feedback(Long needyid ,String like);
     HashSet<Needy> catchUpNeedy(String usrName);
     Boolean editHeroProfile (Hero hero) throws IOException;
+    Boolean deleteHero(String userName);
 
 
 }

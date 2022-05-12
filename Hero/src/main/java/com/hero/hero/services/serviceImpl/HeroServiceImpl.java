@@ -272,4 +272,17 @@ return res;
 
        return true;
    }
+   @Override
+   public Boolean deleteHero(String userName)
+   {
+     Integer x =  this.heroRepository.deleteHeroByUsrName(userName);
+     x=x+1-1;
+
+     if(x==0)
+     {
+         return false;
+     }
+     return true;
+
+   }
 }

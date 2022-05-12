@@ -47,6 +47,25 @@ public  heroes: any;
             });
 
   }
+  logout2()
+  {
+    window.localStorage.removeItem('username');
+    window.localStorage.removeItem('password');
+    window.localStorage.removeItem('type');
+    window.localStorage.removeItem('needyId');
+    window.localStorage.removeItem('heroId');
+  
+    Swal.fire( {title: 'User is Successfully removed from system ',
+          html: "See you soon",
+          timer: 5000,
+          text: 'Redirecting...',
+          icon: 'success',
+          showConfirmButton:true,
+          didClose:()=>{this.router.navigate([''])},
+            });
+
+  }
+
   menuitem1()
   {
     this.router.navigate(['/needyeditprofile']);

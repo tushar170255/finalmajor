@@ -9,6 +9,7 @@ import {HeroService} from '../../services/hero.service';
   styleUrls: ['./heronavbar.component.css']
 })
 export class HeronavbarComponent implements OnInit {
+  // username: any;
 
   constructor(private router:Router ,private heroService :HeroService) { }
 public hero: any;
@@ -50,6 +51,30 @@ public hero: any;
           showConfirmButton:true,
           didClose:()=>{this.router.navigate([''])},
             });
+
+  }
+  logout2()
+  {
+    let username= window.localStorage.getItem('username');
+    // this.heroService.deleteHero(username).subscribe(
+    //   (data : any)=>
+    //   {
+        
+        window.localStorage.removeItem('username');
+        window.localStorage.removeItem('password');
+        window.localStorage.removeItem('type');
+        Swal.fire( {title: 'User is Successfully remove',
+          html: "See you soon",
+          timer: 5000,
+          text: 'Redirecting...',
+          icon: 'success',
+          showConfirmButton:true,
+          didClose:()=>{this.router.navigate([''])},
+            });
+          
+          
+     
+
 
   }
 

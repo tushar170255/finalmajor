@@ -69,5 +69,10 @@ public class HeroController {
         return this.heroService.editHeroProfile(hero);
     }
 
+    @PutMapping("/deletehero")
+    public Boolean deleteHero( @RequestBody String userName)
+    {
+        return this.heroService.deleteHero(userName);
+    }
 
 }
